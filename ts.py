@@ -16,13 +16,13 @@ plt.show()
 
 from statsmodels.tsa import stattools
 from statsmodels.tsa import seasonal
-adf_result = stattools.adfuller(df["Sales"], autolag='AIC')
+adf_result = stattools.adfuller(df["colname"], autolag='AIC')
 print("p-value: ", adf_result[1])
 
 # ---------- ACF and PACF ----------
 
 from pandas.plotting import autocorrelation_plot
-_ = autocorrelation_plot(df["Sales"], color='m')
+_ = autocorrelation_plot(df["colname"], color='m')
 plt.show()
 
 # ---------------ARIMA modeling----------------
